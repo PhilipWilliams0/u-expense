@@ -1,31 +1,33 @@
 <h1 align="center">U-Expense</h1>
 
-[View the live project here.](https://codeinstitute.net)
+[View the live project here.](#)
 
-This is the main marketing website for Code Institute. It is designed to be responsibe and accessible on a range of devices, making it easy to navigate for potential students and partners.
+U-Expense is a site where users can log expenses for approval with full CRUD functionality, using recently learned Python, PyMongo, Flask and Jinga.
 
-<h2 align="center"><img src="https://i.ibb.co/TYvTXz1/Example-CI.png"></h2>
+<h2 align="center"><img src="#"></h2>
 
 ## User Experience (UX)
 
 -   ### User stories
 
+
     -   #### First Time Visitor Goals
 
-        1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
-        2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-        3. As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.
+        1. As a First Time Visitor, I want to know about the site. 
+        2. As a First Time Visitor, I want to easily create an account. 
+        3. As a First Time Visitor, I want to be able to log an expense claim.
 
     -   #### Returning Visitor Goals
 
-        1. As a Returning Visitor, I want to find information about coding challenges.
-        2. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-        3. As a Returning Visitor, I want to find community links.
+        1. As a Returning Visitor, I want to find information about my logged expense.
+        2. As a Returning Visitor, I want to be able to contact site owner. 
+        3. As a Returning Visitor, I want to be able to edit and delete an expense. 
+
 
     -   #### Frequent User Goals
-        1. As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
-        2. As a Frequent User, I want to check to see if there are any new blog posts.
-        3. As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
+        1. As a Frequent User, 
+        2. As a Frequent User, 
+        3. As a Frequent User, 
 
 -   ### Design
     -   #### Colour Scheme
@@ -71,11 +73,11 @@ This is the main marketing website for Code Institute. It is designed to be resp
 
         *   ### Wireframes
 
-            -   Home Page Wireframe - [View](https://github.com/)
+            -   Desktop Wireframe - [View](https://github.com/PhilipWilliams0/u-expense/tree/main/assets/wireframes/desktop-wireframe)
 
-            -   Mobile Wireframe - [View](https://github.com/)
+            -   Tablet  Wireframe - [View](https://github.com/PhilipWilliams0/u-expense/tree/main/assets/wireframes/desktop-wireframe)
 
-            -   Contact Us Page Wireframe - [View](https://github.com/)
+            -   Mobile  Wireframe - [View](https://github.com/PhilipWilliams0/u-expense/tree/main/assets/wireframes/desktop-wireframe)
 
 ## Features
 
@@ -89,6 +91,8 @@ This is the main marketing website for Code Institute. It is designed to be resp
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JavaScript](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Python3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 
 ### Frameworks, Libraries & Programs Used
 
@@ -193,7 +197,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 The project was deployed to GitHub Pages using the following steps...
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/PhilipWilliams0/u-expense)
 2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
     - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
 3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
@@ -219,13 +223,13 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+$ git clone https://github.com/https://github.com/PhilipWilliams0/u-expense
 ```
 
 7. Press Enter. Your local clone will be created.
 
 ```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+$ git clone https://github.com/https://github.com/PhilipWilliams0/u-expense
 > Cloning into `CI-Clone`...
 > remote: Counting objects: 10, done.
 > remote: Compressing objects: 100% (8/8), done.
@@ -234,6 +238,96 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ```
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
+## Create MongoDB database
+My data was stored in a [MongoDB](https://cloud.mongodb.com/) collection set up using the following steps.
+- Sign up / Sign In to mongodb and create a new cluster.
+- Select 'collections' from the cluster dashboard.
+- Click 'create database', and create database name and collection name.
+- Click 'create collection' for any additional data collections needed for the app.
+
+## Create Flask Application and install pymongo
+In the terminal type the following commands to install the required packages:
+    
+- The following command will install the packages according to the configuration file
+    ```
+    $ pip3 install -r requirements.txt
+    ```
+
+Setup app
+- Create `app.py` and `env.py` using the terminal
+    ```
+    touch app.py
+    touch env.py
+    ```
+
+- Create gitignore file using the terminal to keep `env.py `from being pushed to github
+    ```python
+    touch env.py
+    ```
+
+- Within the gitignore file add `env.py` and `__pycache__/`.
+    ```python
+    env.py
+    __pycache__/
+    ```
+
+Set up environment variables and flask instance
+- Within `env.py` add the following environment variables:
+
+    ```python
+    os.environ.setdefault("IP", "0.0.0.0")
+    os.environ.setdefault("PORT", "5000")
+    os.environ.setdefault("SECRET_KEY", "YOUR SECRET KEY")
+    os.environ.setdefault("MONGO_URI", "YOUR MONGO URI")
+    os.environ.setdefault("MONGO_DBNAME", "YOUR DATABASE NAME")
+    ```
+
+    - I used [randomkeygen]() to generate my secret key. 
+    - To get your mongodb URI, go to your cluster dashboard and hit connect. Select your version of python and copy the string to the clipboard.
+
+Within `app.py` import os, Flask and environment variables and create instance of Flask and PyMongo.
+```python
+    import os
+    from flask import Flask
+  
+    if os.path.exists("env.py"):
+        import env
+    
+    app = Flask(__name__)
+
+    app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+    app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+    app.secret_key = os.environ.get("SECRET_KEY")
+
+    mongo = PyMongo(app)
+```
+
+## Setting up the heroku app
+In order to deploy the app via [heroku](https://dashboard.heroku.com/apps), the following steps must be taken. 
+
+- In the terminal, create requirements.txt and Procfile for Heroku to run correctly
+    ```
+    pip3 freeze --local > requirements.txt
+    ```
+    ```
+    echo web: python app.py > Procfile
+    ```
+- Push your files to gitHub
+- Navigate to [heroku](https://heroku.com/) and create a new app in your dashboard.
+- Assign an app name and region and hit 'create app'.
+- In your dashboard, click to connect your gitHub and then locate the correct repository to be deployed.
+- Click on the settings tab and then click 'reveal config vars' in order to input the data hidden in `env.py` as follows.
+        
+        IP                  0.0.0.0
+        MONGO.DBNAME        sustainable_supper_club
+        MONGO_URI           MONGO URI copied from env.py
+        PORT                5000
+        SECRET_KEY          SECRET_KEY copied from env.py
+
+- Click 'enable automatic deploy' in the app dashboard.
+- Click view to see the deployed site!
+
 
 ## Credits
 
