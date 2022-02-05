@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U Expense</title>
-</head>
+<h2>I'm extending the base template</h2>
 
-<body>
-    {% for expense in expenses %}
-    {{ expense.expense_name }}<br>
-    {{ expense.category_name }}<br>
-    {{ expense.expense_description }}<br>
-    {{ expense.approved }}<br>
-    {{ expense.expense_date }}<br>
-    {% endfor %}
-</body>
+<!-- {% for expense in expenses %}
+{{ expense.expense_name }}<br>
+{{ expense.category_name }}<br>
+{{ expense.expense_description }}<br>
+{{ expense.approved }}<br>
+{{ expense.expense_date }}<br>
+{% endfor %} -->
 
-</html>
+{% endblock %}

@@ -1,6 +1,6 @@
 <h1 align="center">U-Expense</h1>
 
-[View the live project here.](#)
+[View the live project here.](https://u-expense.herokuapp.com/)
 
 U-Expense is a site where users can log expenses for approval with full CRUD functionality, using recently learned Python, PyMongo, Flask and Jinga.
 
